@@ -13,52 +13,75 @@ public class Disbursement {
     private int qty;
     private int actualQty;
 
+    public Disbursement() {
+    }
 
-    private String getID() {
+    public Disbursement(String id, Date date, String itemName, String departmentName, int qty, int actualQty) {
+        this.id = id;
+        this.date = date;
+        this.itemName = itemName;
+        this.departmentName = departmentName;
+        this.qty = qty;
+        this.actualQty = actualQty;
+    }
+
+    public String getID() {
         return id;
     }
 
-    private void setID(String id) {
+    public void setID(String id) {
         this.id = id;
     }
 
-    private Date getDate(){
+    public Date getDate(){
         return date;
     }
 
-    private void setDate(Date date){
+    public void setDate(Date date){
         this.date = date;
     }
 
-    private String getItemName() {
+    public String getItemName() {
         return itemName;
     }
 
-    private void setItemName(String itemName) {
+    public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
-    private String getDepartmentName() {
+    public String getDepartmentName() {
         return departmentName;
     }
 
-    private void setDepartmentName(String departmentName) {
+    public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
     }
 
-    private int getQty() {
+    public int getQty() {
         return qty;
     }
 
-    private void setQty(int qty) {
+    public void setQty(int qty) {
         this.qty = qty;
     }
 
-    private int getActualQty() {
+    public int getActualQty() {
         return actualQty;
     }
 
-    private void setActualQty(int actualQty) {
+    public void setActualQty(int actualQty) {
         this.actualQty = actualQty;
+    }
+
+    @Override
+    public String toString() {
+        return "Disbursement{" +
+                "id='" + id + '\'' +
+                ", date=" + date +
+                ", itemName='" + itemName + '\'' +
+                ", departmentName='" + departmentName + '\'' +
+                ", qty=" + qty +
+                ", actualQty=" + actualQty +
+                '}';
     }
 }

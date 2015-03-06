@@ -34,8 +34,8 @@
     <string name="title_activity_approve_reject_stock_adjustment_detail">Approve/Reject StockA djustment Detail</string>
     <string name="title_activity_approve_reject_purchase_order">Approve/Reject Purchase Order</string>
     <string name="title_activity_approve_reject_purchase_order_detail">Approve/Reject Purchase Order Detail</string>
-
     <string name="department_prompt">Choose a department</string>
+
     <string-array name="department_array">
         <item>English</item>
         <item>Computer Science</item>
@@ -43,5 +43,7 @@
         <item>Registrar</item>
         <item>Zoology</item>
     </string-array>
+
+    <string name="title_activity_test">test</string>
 
 </resources>

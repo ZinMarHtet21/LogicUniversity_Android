@@ -12,11 +12,24 @@ public class Supplier {
     private String address;
     private String gstRegistrationNumber;
 
-    private String getID(){
+    public Supplier() {
+    }
+
+    public Supplier(String id, String name, String contactName, String phone, String fax, String address, String gstRegistrationNumber) {
+        this.id = id;
+        this.name = name;
+        this.contactName = contactName;
+        this.phone = phone;
+        this.fax = fax;
+        this.address = address;
+        this.gstRegistrationNumber = gstRegistrationNumber;
+    }
+
+    public String getID(){
         return id;
     }
 
-    private void setID(String id){
+    public void setID(String id){
         this.id = id;
     }
 
@@ -66,5 +79,18 @@ public class Supplier {
 
     public void setGstRegistrationNumber(String gstRegistrationNumber){
         this.gstRegistrationNumber = gstRegistrationNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Supplier{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", contactName='" + contactName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", fax='" + fax + '\'' +
+                ", address='" + address + '\'' +
+                ", gstRegistrationNumber='" + gstRegistrationNumber + '\'' +
+                '}';
     }
 }

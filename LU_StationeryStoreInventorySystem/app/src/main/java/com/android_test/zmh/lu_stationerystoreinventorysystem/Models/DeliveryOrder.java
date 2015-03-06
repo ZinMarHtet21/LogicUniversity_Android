@@ -15,52 +15,75 @@ public class DeliveryOrder {
     private String remark;
     private List<DeliveryOrderDetail> deliveryOrderDetail = new ArrayList<DeliveryOrderDetail>();
 
-    private String getID(){
-        return id;
+    public DeliveryOrder() {
     }
 
-    private void setID(String id){
+    public DeliveryOrder(String id, String number, Date date, String status, String remark, List<DeliveryOrderDetail> deliveryOrderDetail) {
         this.id = id;
-    }
-
-    private String getNumber(){
-        return number;
-    }
-
-    private void setNumber(String number){
         this.number = number;
-    }
-
-    private Date getDate(){
-        return date;
-    }
-
-    private void setDate(Date date){
         this.date = date;
-    }
-
-    private String getStatus(){
-        return status;
-    }
-
-    private void setStatus(String status){
         this.status = status;
-    }
-
-    private String getRemark(){
-        return remark;
-    }
-
-    private void setRemark(String remark){
         this.remark = remark;
-    }
-
-    private List<DeliveryOrderDetail> getDeliveryOrderDetail(){
-        return deliveryOrderDetail;
-    }
-
-    private void setDeliveryOrderDetail(List<DeliveryOrderDetail> deliveryOrderDetail){
         this.deliveryOrderDetail = deliveryOrderDetail;
     }
 
+    public String getID(){
+        return id;
+    }
+
+    public void setID(String id){
+        this.id = id;
+    }
+
+    public String getNumber(){
+        return number;
+    }
+
+    public void setNumber(String number){
+        this.number = number;
+    }
+
+    public Date getDate(){
+        return date;
+    }
+
+    public void setDate(Date date){
+        this.date = date;
+    }
+
+    public String getStatus(){
+        return status;
+    }
+
+    public void setStatus(String status){
+        this.status = status;
+    }
+
+    public String getRemark(){
+        return remark;
+    }
+
+    public void setRemark(String remark){
+        this.remark = remark;
+    }
+
+    public List<DeliveryOrderDetail> getDeliveryOrderDetail(){
+        return deliveryOrderDetail;
+    }
+
+    public void setDeliveryOrderDetail(List<DeliveryOrderDetail> deliveryOrderDetail){
+        this.deliveryOrderDetail = deliveryOrderDetail;
+    }
+
+    @Override
+    public String toString() {
+        return "DeliveryOrder{" +
+                "id='" + id + '\'' +
+                ", number='" + number + '\'' +
+                ", date=" + date +
+                ", status='" + status + '\'' +
+                ", remark='" + remark + '\'' +
+                ", deliveryOrderDetail=" + deliveryOrderDetail +
+                '}';
+    }
 }

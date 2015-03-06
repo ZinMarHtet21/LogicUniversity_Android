@@ -13,51 +13,75 @@ public class StockCard {
     private int qty;
     private int balance;
 
-    private String getID(){
+    public StockCard() {
+    }
+
+    public StockCard(String id, String itemName, String supplierName, Date date, int qty, int balance) {
+        this.id = id;
+        this.itemName = itemName;
+        this.supplierName = supplierName;
+        this.date = date;
+        this.qty = qty;
+        this.balance = balance;
+    }
+
+    public String getID(){
         return id;
     }
 
-    private void setID(String id){
+    public void setID(String id){
         this.id = id;
     }
 
-    private String getItemName() {
+    public String getItemName() {
         return itemName;
     }
 
-    private void setItemName(String itemName) {
+    public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
-    private String getSupplierName() {
+    public String getSupplierName() {
         return supplierName;
     }
 
-    private void setSupplierName(String supplierName) {
+    public void setSupplierName(String supplierName) {
         this.supplierName = supplierName;
     }
 
-    private Date getDate(){
+    public Date getDate(){
         return date;
     }
 
-    private void setDate(Date date){
+    public void setDate(Date date){
         this.date = date;
     }
 
-    private int getQty() {
+    public int getQty() {
         return qty;
     }
 
-    private void setQty(int qty) {
+    public void setQty(int qty) {
         this.qty = qty;
     }
 
-    private int getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    private void setBalance(int balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return "StockCard{" +
+                "id='" + id + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", supplierName='" + supplierName + '\'' +
+                ", date=" + date +
+                ", qty=" + qty +
+                ", balance=" + balance +
+                '}';
     }
 }

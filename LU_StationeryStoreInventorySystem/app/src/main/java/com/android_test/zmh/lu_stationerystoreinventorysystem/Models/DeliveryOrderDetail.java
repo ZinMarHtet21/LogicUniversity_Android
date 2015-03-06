@@ -11,35 +11,55 @@ public class DeliveryOrderDetail {
     private String status;
     private String remark;
 
-    private String getID(){
+    public DeliveryOrderDetail() {
+    }
+
+    public DeliveryOrderDetail(String id, Date date, String status, String remark) {
+        this.id = id;
+        this.date = date;
+        this.status = status;
+        this.remark = remark;
+    }
+
+    public String getID(){
         return id;
     }
 
-    private void setID(String id){
+    public void setID(String id){
         this.id = id;
     }
 
-    private Date getDate(){
+    public Date getDate(){
         return date;
     }
 
-    private void setDate(Date date){
+    public void setDate(Date date){
         this.date = date;
     }
 
-    private String getStatus(){
+    public String getStatus(){
         return status;
     }
 
-    private void setStatus(String status){
+    public void setStatus(String status){
         this.status = status;
     }
 
-    private String getRemark(){
+    public String getRemark(){
         return remark;
     }
 
-    private void setRemark(String remark){
+    public void setRemark(String remark){
         this.remark = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "DeliveryOrderDetail{" +
+                "id='" + id + '\'' +
+                ", date=" + date +
+                ", status='" + status + '\'' +
+                ", remark='" + remark + '\'' +
+                '}';
     }
 }

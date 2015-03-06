@@ -10,6 +10,17 @@ public class Department {
     private String contactNumber;
     private String fax;
 
+    public Department() {
+    }
+
+    public Department(String id, String code, String name, String contactNumber, String fax) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+        this.contactNumber = contactNumber;
+        this.fax = fax;
+    }
+
     public String getId(){
         return id;
     }
@@ -50,4 +61,14 @@ public class Department {
         this.fax = fax;
     }
 
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id='" + id + '\'' +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", contactNumber='" + contactNumber + '\'' +
+                ", fax='" + fax + '\'' +
+                '}';
+    }
 }

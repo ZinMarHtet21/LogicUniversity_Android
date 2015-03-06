@@ -9,11 +9,21 @@ public class RequisitionDetail {
     private int qty;
     private int actualQty;
 
-    private String getID() {
+    public RequisitionDetail() {
+    }
+
+    public RequisitionDetail(String id, String itemName, int qty, int actualQty) {
+        this.id = id;
+        this.itemName = itemName;
+        this.qty = qty;
+        this.actualQty = actualQty;
+    }
+
+    public String getID() {
         return id;
     }
 
-    private void setID(String id) {
+    public void setID(String id) {
         this.id = id;
     }
 
@@ -25,19 +35,29 @@ public class RequisitionDetail {
         this.itemName = itemName;
     }
 
-    private int getQty() {
+    public int getQty() {
         return qty;
     }
 
-    private void setQty(int qty) {
+    public void setQty(int qty) {
         this.qty = qty;
     }
 
-    private int getActualQty() {
+    public int getActualQty() {
         return actualQty;
     }
 
-    private void setActualQty(int actualQty) {
+    public void setActualQty(int actualQty) {
         this.actualQty = actualQty;
+    }
+
+    @Override
+    public String toString() {
+        return "RequisitionDetail{" +
+                "id='" + id + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", qty=" + qty +
+                ", actualQty=" + actualQty +
+                '}';
     }
 }

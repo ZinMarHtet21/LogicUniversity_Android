@@ -13,67 +13,95 @@ public class Item {
     private String status;
     private String uom;
 
-    private String getID(){
+    public Item() {
+    }
+
+    public Item(String id, String category, String description, int reorderLevel, int reorderQty, int virtualBalance, String status, String uom) {
+        this.id = id;
+        this.category = category;
+        this.description = description;
+        this.reorderLevel = reorderLevel;
+        this.reorderQty = reorderQty;
+        this.virtualBalance = virtualBalance;
+        this.status = status;
+        this.uom = uom;
+    }
+
+    public String getID(){
         return id;
     }
 
-    private void setID(String id){
+    public void setID(String id){
         this.id = id;
     }
 
-    private String getCategory(){
+    public String getCategory(){
         return category;
     }
 
-    private void setCategory(String category){
+    public void setCategory(String category){
         this.category = category;
     }
 
-    private String getDescription(){
+    public String getDescription(){
         return description;
     }
 
-    private void setDescription(String description){
+    public void setDescription(String description){
         this.description = description;
     }
 
-    private int getReorderLevel(){
+    public int getReorderLevel(){
         return reorderLevel;
     }
 
-    private void setReorderLevel(int reorderLevel){
+    public void setReorderLevel(int reorderLevel){
         this.reorderLevel = reorderLevel;
     }
 
-    private int getReorderQty(){
+    public int getReorderQty(){
         return reorderQty;
     }
 
-    private void setReorderQty(int reorderQty){
+    public void setReorderQty(int reorderQty){
         this.reorderQty = reorderQty;
     }
 
-    private int getVirtualBalance(){
+    public int getVirtualBalance(){
         return virtualBalance;
     }
 
-    private void setVirtualBalance(int remark){
+    public void setVirtualBalance(int remark){
         this.virtualBalance = virtualBalance;
     }
 
-    private String getStatus(){
+    public String getStatus(){
         return status;
     }
 
-    private void setStatus(String status){
+    public void setStatus(String status){
         this.status = status;
     }
 
-    private String getUOM(){
+    public String getUOM(){
         return uom;
     }
 
-    private void setUOM(String uom){
+    public void setUOM(String uom){
         this.uom = uom;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id='" + id + '\'' +
+                ", category='" + category + '\'' +
+                ", description='" + description + '\'' +
+                ", reorderLevel=" + reorderLevel +
+                ", reorderQty=" + reorderQty +
+                ", virtualBalance=" + virtualBalance +
+                ", status='" + status + '\'' +
+                ", uom='" + uom + '\'' +
+                '}';
     }
 }

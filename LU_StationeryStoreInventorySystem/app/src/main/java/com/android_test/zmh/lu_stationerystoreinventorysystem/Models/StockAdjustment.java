@@ -15,35 +15,49 @@ public class StockAdjustment {
     private String reason;
     private Date date;
 
-    private String getID(){
+    public StockAdjustment() {
+    }
+
+    public StockAdjustment(String id, String voucherId, String itemName, int qty, double price, String status, String reason, Date date) {
+        this.id = id;
+        this.voucherId = voucherId;
+        this.itemName = itemName;
+        this.qty = qty;
+        this.price = price;
+        this.status = status;
+        this.reason = reason;
+        this.date = date;
+    }
+
+    public String getID(){
         return id;
     }
 
-    private void setID(String id){
+    public void setID(String id){
         this.id = id;
     }
 
-    private String getVoucherId(){
+    public String getVoucherId(){
         return voucherId;
     }
 
-    private void setVoucherId(String voucherId){
+    public void setVoucherId(String voucherId){
         this.voucherId = voucherId;
     }
 
-    private String getItemName() {
+    public String getItemName() {
         return itemName;
     }
 
-    private void setItemName(String itemName) {
+    public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
-    private int getQty() {
+    public int getQty() {
         return qty;
     }
 
-    private void setQty(int qty) {
+    public void setQty(int qty) {
         this.qty = qty;
     }
 
@@ -55,27 +69,41 @@ public class StockAdjustment {
         this.price = price;
     }
 
-    private String getStatus(){
+    public String getStatus(){
         return status;
     }
 
-    private void setStatus(String status){
+    public void setStatus(String status){
         this.status = status;
     }
 
-    private String getReason(){
+    public String getReason(){
         return reason;
     }
 
-    private void setReason(String reason){
+    public void setReason(String reason){
         this.reason = reason;
     }
 
-    private Date getDate(){
+    public Date getDate(){
         return date;
     }
 
-    private void setDate(Date date){
+    public void setDate(Date date){
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "StockAdjustment{" +
+                "id='" + id + '\'' +
+                ", voucherId='" + voucherId + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", qty=" + qty +
+                ", price=" + price +
+                ", status='" + status + '\'' +
+                ", reason='" + reason + '\'' +
+                ", date=" + date +
+                '}';
     }
 }

@@ -14,11 +14,26 @@ public class Employee {
     private String password;
     private String departmentName;
 
-    private String getID(){
+    public Employee() {
+    }
+
+    public Employee(String id, String type, String name, String gender, String emp_number, String email, String phone, String password, String departmentName) {
+        this.id = id;
+        this.type = type;
+        this.name = name;
+        this.gender = gender;
+        this.emp_number = emp_number;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+        this.departmentName = departmentName;
+    }
+
+    public String getID(){
         return id;
     }
 
-    private void setID(String id){
+    public void setID(String id){
         this.id = id;
     }
 
@@ -84,5 +99,20 @@ public class Employee {
 
     public void setDepartmentName(String departmentName){
         this.departmentName = departmentName;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", type='" + type + '\'' +
+                ", name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", emp_number='" + emp_number + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                ", departmentName='" + departmentName + '\'' +
+                '}';
     }
 }
