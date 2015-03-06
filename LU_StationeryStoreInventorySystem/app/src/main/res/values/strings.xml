@@ -9,30 +9,39 @@
     <string name="password_hint">Password</string>
     <string name="title_activity_acitvity_main_screen">acitvity_main_screen</string>
     <string name="title_activity_main_screen">MainScreen</string>
-    <string name="title_activity_clerk_main_screen">ClerkMainScreen</string>
-    <string name="title_activity_supervisor_main_screen">SupervisorMainScreen</string>
-    <string name="title_activity_manager_main_screen">ManagerMainScreen</string>
-    <string name="title_activity_employee_main_screen">EmployeeMainScreen</string>
-    <string name="title_activity_representative_main_screen">RepresentativeMainScreen</string>
-    <string name="title_activity_hodmain_screen">HODMainScreen</string>
-    <string name="title_activity_update_profile">UpdateProfile</string>
-    <string name="title_activity_new_requisition">NewRequisition</string>
-    <string name="title_activity_requisition_history">RequisitionHistory</string>
-    <string name="title_activity_requisition_list">RequisitionList</string>
-    <string name="title_activity_requisition_list_detail">RequisitionListDetail</string>
-    <string name="title_activity_disbursement_list">DisbursementList</string>
-    <string name="title_activity_disbursement_list_detail">DisbursementListDetail</string>
-    <string name="title_activity_check_low_stock">CheckLowStock</string>
-    <string name="title_activity_retrieval_list">RetrievalList</string>
-    <string name="title_activity_check_low_stock_main">CheckLowStockMain</string>
-    <string name="title_activity_check_low_stock_all_stock">CheckLowStockAllStock</string>
-    <string name="title_activity_check_low_stock_search">CheckLowStockSearch</string>
-    <string name="title_activity_purchase_order">PurchaseOrder</string>
-    <string name="title_activity_purchase_order_detail">PurchaseOrderDetail</string>
-    <string name="title_activity_report_discrepency">ReportDiscrepency</string>
-    <string name="title_activity_approve_reject_stock_adjustment">ApproveRejectStockAdjustment</string>
-    <string name="title_activity_approve_reject_stock_adjustment_detail">ApproveRejectStockAdjustmentDetail</string>
-    <string name="title_activity_approve_reject_purchase_order">ApproveRejectPurchaseOrder</string>
-    <string name="title_activity_approve_reject_purchase_order_detail">ApproveRejectPurchaseOrderDetail</string>
+    <string name="title_activity_clerk_main_screen">Clerk MainScreen</string>
+    <string name="title_activity_supervisor_main_screen">Supervisor MainScreen</string>
+    <string name="title_activity_manager_main_screen">Manager MainScreen</string>
+    <string name="title_activity_employee_main_screen">Employee MainScreen</string>
+    <string name="title_activity_representative_main_screen">Representative MainScreen</string>
+    <string name="title_activity_hodmain_screen">HOD MainScreen</string>
+    <string name="title_activity_update_profile">Update Profile</string>
+    <string name="title_activity_new_requisition">New Requisition</string>
+    <string name="title_activity_requisition_history">Requisition History</string>
+    <string name="title_activity_requisition_list">Requisition List</string>
+    <string name="title_activity_requisition_list_detail">Requisition List Detail</string>
+    <string name="title_activity_disbursement_list">Disbursement List</string>
+    <string name="title_activity_disbursement_list_detail">Disbursement List Detail</string>
+    <string name="title_activity_check_low_stock">Check Low Stock</string>
+    <string name="title_activity_retrieval_list">Retrieval List</string>
+    <string name="title_activity_check_low_stock_main">Check Low Stock Main</string>
+    <string name="title_activity_check_low_stock_all_stock">Check Low Stock All Stock</string>
+    <string name="title_activity_check_low_stock_search">Check Low Stock Search</string>
+    <string name="title_activity_purchase_order">Purchase Order</string>
+    <string name="title_activity_purchase_order_detail">Purchase Order Detail</string>
+    <string name="title_activity_report_discrepency">Report Discrepency</string>
+    <string name="title_activity_approve_reject_stock_adjustment">Approve/Reject Stock Adjustment</string>
+    <string name="title_activity_approve_reject_stock_adjustment_detail">Approve/Reject StockA djustment Detail</string>
+    <string name="title_activity_approve_reject_purchase_order">Approve/Reject Purchase Order</string>
+    <string name="title_activity_approve_reject_purchase_order_detail">Approve/Reject Purchase Order Detail</string>
+
+    <string name="department_prompt">Choose a department</string>
+    <string-array name="department_array">
+        <item>English</item>
+        <item>Computer Science</item>
+        <item>Commerce</item>
+        <item>Registrar</item>
+        <item>Zoology</item>
+    </string-array>
 
 </resources>
