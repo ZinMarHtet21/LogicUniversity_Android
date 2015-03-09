@@ -14,6 +14,7 @@ public class Employee {
     private String password;
     private String departmentName;
 
+<<<<<<< HEAD
     public Employee() {
     }
 
@@ -34,6 +35,13 @@ public class Employee {
     }
 
     public void setID(String id){
+=======
+    private String getID(){
+        return id;
+    }
+
+    private void setID(String id){
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         this.id = id;
     }
 
@@ -100,6 +108,7 @@ public class Employee {
     public void setDepartmentName(String departmentName){
         this.departmentName = departmentName;
     }
+<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -115,4 +124,6 @@ public class Employee {
                 ", departmentName='" + departmentName + '\'' +
                 '}';
     }
+=======
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 }

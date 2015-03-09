@@ -14,6 +14,57 @@ public class DeliveryOrder {
     private String status;
     private String remark;
     private List<DeliveryOrderDetail> deliveryOrderDetail = new ArrayList<DeliveryOrderDetail>();
+<<<<<<< HEAD
+=======
+
+    private String getID(){
+        return id;
+    }
+
+    private void setID(String id){
+        this.id = id;
+    }
+
+    private String getNumber(){
+        return number;
+    }
+
+    private void setNumber(String number){
+        this.number = number;
+    }
+
+    private Date getDate(){
+        return date;
+    }
+
+    private void setDate(Date date){
+        this.date = date;
+    }
+
+    private String getStatus(){
+        return status;
+    }
+
+    private void setStatus(String status){
+        this.status = status;
+    }
+
+    private String getRemark(){
+        return remark;
+    }
+
+    private void setRemark(String remark){
+        this.remark = remark;
+    }
+
+    private List<DeliveryOrderDetail> getDeliveryOrderDetail(){
+        return deliveryOrderDetail;
+    }
+
+    private void setDeliveryOrderDetail(List<DeliveryOrderDetail> deliveryOrderDetail){
+        this.deliveryOrderDetail = deliveryOrderDetail;
+    }
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 
     public DeliveryOrder() {
     }
