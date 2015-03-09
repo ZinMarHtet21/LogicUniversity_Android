@@ -9,6 +9,7 @@ public class PurchaseOrderDetail {
     private int qty;
     private double price;
 
+<<<<<<< HEAD
     public PurchaseOrderDetail() {
     }
 
@@ -24,6 +25,13 @@ public class PurchaseOrderDetail {
     }
 
     public void setID(String id) {
+=======
+    private String getID() {
+        return id;
+    }
+
+    private void setID(String id) {
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         this.id = id;
     }
 
@@ -35,11 +43,19 @@ public class PurchaseOrderDetail {
         this.itemName = itemName;
     }
 
+<<<<<<< HEAD
     public int getQty() {
         return qty;
     }
 
     public void setQty(int qty) {
+=======
+    private int getQty() {
+        return qty;
+    }
+
+    private void setQty(int qty) {
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         this.qty = qty;
     }
 
@@ -51,6 +67,7 @@ public class PurchaseOrderDetail {
         this.price = price;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return "PurchaseOrderDetail{" +
@@ -60,4 +77,6 @@ public class PurchaseOrderDetail {
                 ", price=" + price +
                 '}';
     }
+=======
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 }

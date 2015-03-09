@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android_test.zmh.lu_stationerystoreinventorysystem" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_project_log"
@@ -123,12 +125,25 @@
             android:label="@string/title_activity_approve_reject_purchase_order_detail" >
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".DepartmentScreens.test"
             android:label="@string/title_activity_test" >
         </activity>
         <activity
             android:name=".DepartmentScreens.RequisitionHistoryDetail"
             android:label="@string/title_activity_requisition_history_detail" >
+=======
+            android:name=".StoreScreens.ProcessRequisitions"
+            android:label="@string/title_activity_process_requisitions" >
+        </activity>
+        <activity
+            android:name=".StoreScreens.DisbursementDepartmentList"
+            android:label="@string/title_activity_disbursement_department_list" >
+        </activity>
+        <activity
+            android:name=".StoreScreens.DisbursementDepartmentListDetail"
+            android:label="@string/title_activity_disbursement_department_list_detail" >
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         </activity>
     </application>
 

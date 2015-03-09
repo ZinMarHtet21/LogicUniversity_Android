@@ -15,6 +15,7 @@ public class StockAdjustment {
     private String reason;
     private Date date;
 
+<<<<<<< HEAD
     public StockAdjustment() {
     }
 
@@ -58,6 +59,37 @@ public class StockAdjustment {
     }
 
     public void setQty(int qty) {
+=======
+    private String getID(){
+        return id;
+    }
+
+    private void setID(String id){
+        this.id = id;
+    }
+
+    private String getVoucherId(){
+        return voucherId;
+    }
+
+    private void setVoucherId(String voucherId){
+        this.voucherId = voucherId;
+    }
+
+    private String getItemName() {
+        return itemName;
+    }
+
+    private void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    private int getQty() {
+        return qty;
+    }
+
+    private void setQty(int qty) {
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         this.qty = qty;
     }
 
@@ -69,6 +101,7 @@ public class StockAdjustment {
         this.price = price;
     }
 
+<<<<<<< HEAD
     public String getStatus(){
         return status;
     }
@@ -106,4 +139,29 @@ public class StockAdjustment {
                 ", date=" + date +
                 '}';
     }
+=======
+    private String getStatus(){
+        return status;
+    }
+
+    private void setStatus(String status){
+        this.status = status;
+    }
+
+    private String getReason(){
+        return reason;
+    }
+
+    private void setReason(String reason){
+        this.reason = reason;
+    }
+
+    private Date getDate(){
+        return date;
+    }
+
+    private void setDate(Date date){
+        this.date = date;
+    }
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 }

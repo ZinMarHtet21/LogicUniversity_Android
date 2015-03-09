@@ -1,14 +1,22 @@
 package com.android_test.zmh.lu_stationerystoreinventorysystem.Models;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Created by student on 4/3/15.
  */
+<<<<<<< HEAD
 public class Department {
+=======
+public class Department implements Serializable {
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
     private String id;
     private String code;
     private String name;
     private String contactNumber;
     private String fax;
+<<<<<<< HEAD
 
     public Department() {
     }
@@ -20,6 +28,10 @@ public class Department {
         this.contactNumber = contactNumber;
         this.fax = fax;
     }
+=======
+    private String representative;
+    private String collectionPoint;
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 
     public String getId(){
         return id;
@@ -61,6 +73,7 @@ public class Department {
         this.fax = fax;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return "Department{" +
@@ -71,4 +84,23 @@ public class Department {
                 ", fax='" + fax + '\'' +
                 '}';
     }
+=======
+    public String getRepresentative() {
+        return representative;
+    }
+
+    public void setRepresentative(String representative) {
+        this.representative = representative;
+    }
+
+    public String getCollectionPoint() {
+        return collectionPoint;
+    }
+
+    public void setCollectionPoint(String collectionPoint) {
+        this.collectionPoint = collectionPoint;
+    }
+
+
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 }

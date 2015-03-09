@@ -6,7 +6,11 @@ import java.util.Date;
 /**
  * Created by student on 4/3/15.
  */
+<<<<<<< HEAD
 public class Disbursement implements Serializable {
+=======
+public class Disbursement implements Serializable{
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
     private String id;
     private Date date;
     private String itemName;
@@ -14,6 +18,7 @@ public class Disbursement implements Serializable {
     private int qty;
     private int actualQty;
 
+<<<<<<< HEAD
     public Disbursement() {
     }
 
@@ -39,6 +44,21 @@ public class Disbursement implements Serializable {
     }
 
     public void setDate(Date date){
+=======
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         this.date = date;
     }
 
@@ -73,6 +93,7 @@ public class Disbursement implements Serializable {
     public void setActualQty(int actualQty) {
         this.actualQty = actualQty;
     }
+<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -85,4 +106,6 @@ public class Disbursement implements Serializable {
                 ", actualQty=" + actualQty +
                 '}';
     }
+=======
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 }

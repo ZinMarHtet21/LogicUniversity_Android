@@ -12,6 +12,7 @@ public class Supplier {
     private String address;
     private String gstRegistrationNumber;
 
+<<<<<<< HEAD
     public Supplier() {
     }
 
@@ -30,6 +31,13 @@ public class Supplier {
     }
 
     public void setID(String id){
+=======
+    private String getID(){
+        return id;
+    }
+
+    private void setID(String id){
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
         this.id = id;
     }
 
@@ -80,6 +88,7 @@ public class Supplier {
     public void setGstRegistrationNumber(String gstRegistrationNumber){
         this.gstRegistrationNumber = gstRegistrationNumber;
     }
+<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -93,4 +102,6 @@ public class Supplier {
                 ", gstRegistrationNumber='" + gstRegistrationNumber + '\'' +
                 '}';
     }
+=======
+>>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
 }
