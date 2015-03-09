@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="Main.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +19,14 @@
             </intent-filter>
 ´
         </activity>
-        <activity
-            android:name=".acitvity_main_screen"
+  <!--      <activity
+            android:name=".acitvity_main_screen""
             android:label="@string/title_activity_acitvity_main_screen" >
-        </activity>
-        <activity
-            android:name=".MainScreen"
+        </activity>-->
+       <!-- <activity
+            android:name=".MainScreens."
             android:label="@string/title_activity_main_screen" >
-        </activity>
+        </activity>-->
         <activity
             android:name=".MainScreens.ClerkMainScreen"
             android:label="@string/title_activity_clerk_main_screen" >
@@ -125,14 +125,15 @@
             android:label="@string/title_activity_approve_reject_purchase_order_detail" >
         </activity>
         <activity
-<<<<<<< HEAD
+
             android:name=".DepartmentScreens.test"
             android:label="@string/title_activity_test" >
         </activity>
         <activity
             android:name=".DepartmentScreens.RequisitionHistoryDetail"
             android:label="@string/title_activity_requisition_history_detail" >
-=======
+        </activity>
+        <activity
             android:name=".StoreScreens.ProcessRequisitions"
             android:label="@string/title_activity_process_requisitions" >
         </activity>
@@ -143,7 +144,7 @@
         <activity
             android:name=".StoreScreens.DisbursementDepartmentListDetail"
             android:label="@string/title_activity_disbursement_department_list_detail" >
->>>>>>> 5bd12ef156bb06eb99dc19d6f1faaeba8c8b7dcd
+
         </activity>
     </application>
 
