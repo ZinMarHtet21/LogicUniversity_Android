@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android_test.zmh.lu_stationerystoreinventorysystem.DepartmentScreens.test;
 import com.android_test.zmh.lu_stationerystoreinventorysystem.MainScreens.ClerkMainScreen;
 import com.android_test.zmh.lu_stationerystoreinventorysystem.MainScreens.EmployeeMainScreen;
 import com.android_test.zmh.lu_stationerystoreinventorysystem.MainScreens.HODMainScreen;
@@ -48,6 +49,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             startActivity(new Intent(this, RepresentativeMainScreen.class));
         }else if(username.getText().toString().equals("supervisor") || username.getText().toString().equals("Supervisor")){
             startActivity(new Intent(this, SupervisorMainScreen.class));
+        }
+        else if(username.getText().toString().equals("test")){
+            startActivity(new Intent(this, test.class));
         }
     }
 }

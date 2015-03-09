@@ -51,7 +51,8 @@
         </activity>
         <activity
             android:name=".UpdateProfile"
-            android:label="@string/title_activity_update_profile" >
+            android:label="@string/title_activity_update_profile"
+            android:parentActivityName=".MainScreens.EmployeeMainScreen" >
         </activity>
         <activity
             android:name=".DepartmentScreens.NewRequisition"
@@ -120,6 +121,14 @@
         <activity
             android:name=".StoreScreens.ApproveRejectPurchaseOrderDetail"
             android:label="@string/title_activity_approve_reject_purchase_order_detail" >
+        </activity>
+        <activity
+            android:name=".DepartmentScreens.test"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".DepartmentScreens.RequisitionHistoryDetail"
+            android:label="@string/title_activity_requisition_history_detail" >
         </activity>
     </application>
 

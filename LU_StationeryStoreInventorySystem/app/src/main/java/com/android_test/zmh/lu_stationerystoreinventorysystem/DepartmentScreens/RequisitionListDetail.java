@@ -4,38 +4,70 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
+import com.android_test.zmh.lu_stationerystoreinventorysystem.Models.Requisition;
+import com.android_test.zmh.lu_stationerystoreinventorysystem.Models.RequisitionDetail;
 import com.android_test.zmh.lu_stationerystoreinventorysystem.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class RequisitionListDetail extends ActionBarActivity {
 
+    Requisition model;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requisition_list_detail);
-    }
+        setContentView(R.layout.activity_requisition_history_detail);
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_requisition_list_detail, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if(getIntent()!= null) {
+            model = (Requisition) getIntent().getSerializableExtra("Requisition");
+            //    ("Requisition",listdata.get(position));
         }
 
-        return super.onOptionsItemSelected(item);
+        // model to hashmap >>
+        // convertModelToHashMapModel(model)
+
+        ListView lv = (ListView) findViewById(R.id.listView_ReqDetails);
+        SimpleAdapter mysimpleAdapter = new SimpleAdapter(this,convertModelToHashMapModel(model),android.R.layout.simple_list_item_2,new String[]{"itemName","qty"} ,new int[]{ android.R.id.text1,android.R.id.text2});
+        lv.setAdapter(mysimpleAdapter);
+        //create an adapter for listview
+        //set the adapter with the respective model  (Requisition details)
+
+        TextView tv = (TextView) findViewById(R.id.textView_Date);
+        tv.setText(model.getProcessDate().toString());
+        Button btnApprove = (Button) findViewById(R.id.button_approve);
+        Button btnReject = (Button) findViewById(R.id.button_reject);
+
     }
+
+    public ArrayList<temp> convertModelToHashMapModel(Requisition model) {
+        ArrayList<temp> tempList = new ArrayList<temp>();
+        for(RequisitionDetail rd : model.getRequisitionDetails()) {
+
+            String qty = ""+rd.getQty();
+            tempList.add(new temp(rd.getItemName(),qty));
+
+        }
+
+        return  tempList;
+    }
+
+    public  class temp extends HashMap<String,String>{
+        public temp(String item,String qty) {
+            put("itemName", item);
+            put("qty", qty);
+        }
+    }
+
+
+
 }
