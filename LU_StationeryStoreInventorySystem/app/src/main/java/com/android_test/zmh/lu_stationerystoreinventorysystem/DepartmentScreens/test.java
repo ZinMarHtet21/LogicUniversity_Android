@@ -77,6 +77,8 @@ public class test extends ListActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data);
         setListAdapter(adapter);
 
+
+
         /*setListAdapter(new SimpleAdapter(this,data,android.R.layout.simple_list_item_1,
                 new String[]{"date","departmentName"},
                 new int[]{android.R.id.text1,android.R.id.text2}));*/

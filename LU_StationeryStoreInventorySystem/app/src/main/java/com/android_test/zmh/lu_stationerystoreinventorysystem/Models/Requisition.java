@@ -1,13 +1,13 @@
 package com.android_test.zmh.lu_stationerystoreinventorysystem.Models;
 
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by student on 4/3/15.
- */
-public class Requisition {
+public class Requisition implements Serializable {
+
     private String id;
     private String madeBy;
     private Date date;
@@ -18,11 +18,9 @@ public class Requisition {
     private Date processDate;
     private List<RequisitionDetail> requisitionDetails = new ArrayList<RequisitionDetail>();
 
-    public  Requisition(){
+    public Requisition(){}
 
-    }
-
-    public Requisition(String id, String madeBy, Date date, String departmentName, String status, String remark, String approvedBy, Date processDate) {
+    public Requisition(String id, String madeBy, Date date, String departmentName, String status, String remark, String approvedBy, Date processDates) {
         this.id = id;
         this.madeBy = madeBy;
         this.date = date;
@@ -30,7 +28,6 @@ public class Requisition {
         this.status = status;
         this.remark = remark;
         this.approvedBy = approvedBy;
-        this.processDate = processDate;
     }
 
     public String getId() {
@@ -97,11 +94,11 @@ public class Requisition {
         this.processDate = processDate;
     }
 
-    public List<RequisitionDetail> getRequisitionDetails(){
+    public List<RequisitionDetail> getRequisitionDetails() {
         return requisitionDetails;
     }
 
-    public void setRequisitionDetails(List<RequisitionDetail> requisitionDetails){
+    public void setRequisitionDetails(List<RequisitionDetail> requisitionDetails) {
         this.requisitionDetails = requisitionDetails;
     }
 
@@ -119,4 +116,5 @@ public class Requisition {
                 ", requisitionDetails=" + requisitionDetails +
                 '}';
     }
+
 }

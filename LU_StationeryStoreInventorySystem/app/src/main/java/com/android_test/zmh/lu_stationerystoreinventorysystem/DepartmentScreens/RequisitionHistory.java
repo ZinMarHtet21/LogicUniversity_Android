@@ -1,41 +1,97 @@
 package com.android_test.zmh.lu_stationerystoreinventorysystem.DepartmentScreens;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
+import com.android_test.zmh.lu_stationerystoreinventorysystem.ModelPopulator.RequisitionPopulator;
+import com.android_test.zmh.lu_stationerystoreinventorysystem.Models.Requisition;
 import com.android_test.zmh.lu_stationerystoreinventorysystem.R;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class RequisitionHistory extends ActionBarActivity {
+
+public class RequisitionHistory extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requisition_history);
+        RequisitionPopulator pop = new RequisitionPopulator();
+        final List<Requisition> listdata = pop.populateRequisition();
+
+
+        // create an adapter
+        // pass the data.
+        //set the adapter
+        ListView lv = (ListView) findViewById(R.id.listView2);
+        Myadapter myadapter = new Myadapter(this,listdata);
+        lv.setAdapter(myadapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(RequisitionHistory.this,RequisitionHistoryDetail.class);
+                i.putExtra("Requisition",listdata.get(position));
+              startActivity(i);
+            }
+        });
+
     }
 
+    public class Myadapter extends BaseAdapter {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_requisition_history, menu);
-        return true;
-    }
+        // starts here...
+        List<Requisition> list = new ArrayList<Requisition>();
+        Context ctx;
+        LayoutInflater inflater;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        public Myadapter(Context contxt, List<Requisition> listData) {
+            ctx = contxt;
+            list = listData;
+            inflater = LayoutInflater.from(this.ctx);
+        }
+        // ends here...
+        @Override
+        public int getCount() {
+            return list.size();
         }
 
-        return super.onOptionsItemSelected(item);
+        @Override
+        public Object getItem(int position) {
+            return list.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            View v = inflater.inflate(R.layout.requisition_history_row, null, true);
+            TextView tv1 = (TextView) v.findViewById(R.id.req_id);
+            TextView tv2 = (TextView) v.findViewById(R.id.req_date);
+            TextView tv3 = (TextView) v.findViewById(R.id.req_status);
+            tv1.setText(list.get(position).getId());
+            tv2.setText(list.get(position).getProcessDate().toString());
+            tv3.setText(list.get(position).getStatus());
+
+            return v;
+        }
+
     }
+
 }

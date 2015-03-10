@@ -20,6 +20,8 @@ public class RequisitionPopulator implements IRequisition {
 
         // new Requisition
         Requisition newReq = new Requisition("Req01","SomeONe",(new Date(System.currentTimeMillis())),"SomeDepartMent","Approved","New Remark","HOD",(new Date(System.currentTimeMillis())));
+        Requisition newReq2 = new Requisition("Req02","SomeONe",(new Date(System.currentTimeMillis())),"SomeDepartMent","Approved","New Remark","HOD",(new Date(System.currentTimeMillis())));
+        Requisition newReq3 = new Requisition("Req03","SomeONe",(new Date(System.currentTimeMillis())),"SomeDepartMent","Approved","New Remark","HOD",(new Date(System.currentTimeMillis())));
 
         // some details....
         RequisitionDetail details1 = new RequisitionDetail("Req01","Item01",10,5);
@@ -32,8 +34,10 @@ public class RequisitionPopulator implements IRequisition {
         reqDetails_list.add(details2);
         reqDetails_list.add(details3);
 
-        // set the reqdetails into the a  single Req.
+        // set the reqdetails into the a single Req.
          newReq.setRequisitionDetails(reqDetails_list);
+        newReq2.setRequisitionDetails(reqDetails_list);
+        newReq3.setRequisitionDetails(reqDetails_list);
 
         // save the req into the list of req,,
         req_list.add(newReq);

@@ -9,8 +9,7 @@ public class PurchaseOrderDetail {
     private int qty;
     private double price;
 
-    public PurchaseOrderDetail() {
-    }
+    public PurchaseOrderDetail(){}
 
     public PurchaseOrderDetail(String id, String itemName, int qty, double price) {
         this.id = id;
@@ -19,19 +18,19 @@ public class PurchaseOrderDetail {
         this.price = price;
     }
 
-    public String getID() {
+    public String getId() {
         return id;
     }
 
-    public void setID(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getItemName(){
+    public String getItemName() {
         return itemName;
     }
 
-    public void setItemName(String itemName){
+    public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
@@ -43,11 +42,11 @@ public class PurchaseOrderDetail {
         this.qty = qty;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price){
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -60,4 +59,5 @@ public class PurchaseOrderDetail {
                 ", price=" + price +
                 '}';
     }
+
 }
